@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import doller from '../../assets/image/dollar-sign.svg'
 import Frame from '../../assets/image/Frame.svg'
+import { ToastContainer } from 'react-toastify';
 
 const Course = ({course, handleAddToCart}) => {
     const {cover_img, course_title, course_details, price, credit} = course;
@@ -20,6 +21,7 @@ const Course = ({course, handleAddToCart}) => {
                 </div>
             </div>
             <button onClick={() => handleAddToCart(course)} className='bg-[#2F80ED] w-full text-white rounded-md p-2 mt-3'>Select</button>
+            <ToastContainer/>
         </div>
         
     );
