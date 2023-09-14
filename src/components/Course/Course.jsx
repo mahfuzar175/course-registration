@@ -12,14 +12,14 @@ const Course = ({course, handleAddToCart}) => {
             <div className='flex justify-between mt-3'>
                 <div className='flex items-center'>
                     <img src={doller} alt="" />
-                    <p className='text-sm font-normal text-gray-600 ml-1'>Price: {price}</p>
+                    <p className='text-sm font-normal text-gray-500 ml-1'>Price: {price}</p>
                 </div>
                 <div className='flex items-center'>
                     <img src={Frame} alt="" />
-                    <p className='text-sm font-normal text-gray-600 ml-1'>Credit: {credit}hr</p>
+                    <p className='text-sm font-normal text-gray-500 ml-1'>Credit: {credit}hr</p>
                 </div>
             </div>
-            <button onClick={handleAddToCart} className='bg-[#2F80ED] w-full text-white rounded-md p-2 mt-3'>Select</button>
+            <button onClick={() => handleAddToCart(course)} className='bg-[#2F80ED] w-full text-white rounded-md p-2 mt-3'>Select</button>
         </div>
         
     );
