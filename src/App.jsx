@@ -5,11 +5,15 @@ import Header from './components/Header/Header'
 
 function App() {
 
+  const handleAddToCart = cours =>{
+    console.log('adding')
+  }
+
   return (
     <>
       <Header></Header>
-      <div className='flex justify-between mx-5 '>
-        <Courses></Courses>
+      <div className='flex justify-between mx-5 md:mx-10 '>
+        <Courses handleAddToCart={handleAddToCart}></Courses>
         <Cart></Cart>
       </div>
     </>
