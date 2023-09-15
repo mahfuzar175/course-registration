@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import doller from '../../assets/image/dollar-sign.svg'
 import Frame from '../../assets/image/Frame.svg'
-import { ToastContainer } from 'react-toastify';
+import {ToastContainer} from 'react-toastify';
 
 const Course = ({course, handleAddToCart}) => {
     const {cover_img, course_title, course_details, price, credit} = course;
