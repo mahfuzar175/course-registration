@@ -29,7 +29,7 @@ function App() {
     
       const totalRemaining = 20 - count;
       if(count > 20){
-        return toast.warning("Yor can't take up to 20 Credit!")
+        return toast.warning("Maximum credit limit exceeded!")
       }
       else{
         setTotalPrice(countPrice);
