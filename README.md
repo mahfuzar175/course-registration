@@ -21,7 +21,7 @@ These features provide a basic but functional course registration system with va
 
 In this React project, state management is at the core of my application's functionality. I've harnessed the power of React's built-in `useState` and `useEffect` hooks to expertly manage the state of my application.
 
-### App Component State
+### (i) App Component State
 
 In the `App` component, I've defined several state variables using the `useState` hook to manage different aspects of my application's state:
 
@@ -32,7 +32,7 @@ In the `App` component, I've defined several state variables using the `useState
 
 I update these state variables based on user actions, such as adding courses to the cart.
 
-### `handleAddToCart` Function
+### (ii) `handleAddToCart` Function
 
 The `handleAddToCart` function is used to add a course to the cart (i.e., the `selectedCourse` state array). Here's what it does:
 
@@ -44,19 +44,19 @@ The `handleAddToCart` function is used to add a course to the cart (i.e., the `s
 
 - I check whether the user has exceeded the maximum credit limit (20 credits) and display a warning message if needed.
 
-### Courses Component State
+### (iii) Courses Component State
 
 In the `Courses` component, I manage the `courses` state using the `useState` hook. This state variable stores the list of available courses fetched from an external JSON file. I use the `useEffect` hook to fetch the course data and update the `courses` state when the component mounts.
 
-### Cart Component State
+### (iv) Cart Component State
 
 In the `Cart` component, I receive the `selectedCourse`, `remaining`, `totalCredit`, and `totalPrice` props. I use these props to display the selected courses in the cart and show information about the remaining credit hours and the total price.
 
-### State Validation
+### (v) State Validation
 
 Throughout my code, I perform validation on the state to ensure that it remains consistent and within the desired constraints. For example, I check if the total credit hours exceed the maximum limit and show a warning if necessary.
 
-### PropTypes
+### (yii) PropTypes
 
 I use `PropTypes` to define the expected prop types for each component. This helps in documenting the expected props and can also catch potential bugs during development.
 
