@@ -1,16 +1,18 @@
+# Course-Registration
+
 ## Features
 
-- **Course Selection and Cart:**
+- ### **Course Selection and Cart:**
   - Users can browse through the list of available courses.
   - They can select one course at a time by clicking the "Select" button.
   - The selected course's title, credit, and price are displayed in the cart.
   - The cart shows the total credit hours and total price of selected course(s).
 
-- **Credit Hours Validation:**
+- ### **Credit Hours Validation:**
   - The system tracks the total credit hours in the cart as users select courses.
   - An error message is displayed if the total credit hours exceed the maximum limit (e.g., 20 hours).
 
-- **Total Price Calculation:**
+- ### **Total Price Calculation:**
   - The system calculates and displays the total price of selected courses in the cart.
   - The total price is updated whenever a course is selected or deselected.
   - The user can see the cost of their selected courses at all times.
