@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Coursename from '../Coursename/Coursename';
-const Cart = ({selectedCourse, remaining, totalCredit}) => {
+const Cart = ({selectedCourse, remaining, totalCredit, totalPrice}) => {
 
     return (
         <div className="w-1/3 ml-4 md:ml-10">
@@ -16,7 +16,7 @@ const Cart = ({selectedCourse, remaining, totalCredit}) => {
                 <hr />
                 <h2 className="font-medium mt-4 mb-4">Total Credit Hours: {totalCredit}</h2>
                 <hr />
-                <h3 className="font-semibold mt-4">Total Price:  USD</h3>
+                <h3 className="font-semibold mt-4">Total Price: {totalPrice} USD</h3>
             </div>
         </div>
     );
@@ -24,6 +24,9 @@ const Cart = ({selectedCourse, remaining, totalCredit}) => {
 
 Cart.propTypes = {
     selectedCourse: PropTypes.object.isRequired,
+    remaining: PropTypes.object.isRequired,
+    totalCredit: PropTypes.object.isRequired,
+    totalPrice: PropTypes.object.isRequired    
 }
 
 export default Cart;

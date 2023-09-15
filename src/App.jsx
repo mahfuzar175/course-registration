@@ -10,11 +10,13 @@ function App() {
   const [selectedCourse, setselectedCourse] = useState([]);
   const [remaining, setRemaining] = useState(20);
   const [totalCredit, setTotalCredit] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
 
   const handleAddToCart = (course) =>{
     const isExist = selectedCourse.find(item => item.id == course.id);
     let count = course.credit;
+    let countPrice = course.price;
 
     if(isExist){
       toast.error("Already taken!")
@@ -22,6 +24,7 @@ function App() {
     else{
       selectedCourse.forEach((item) =>{
       count = count + item.credit;
+      countPrice = countPrice + item.price;
     });
     
       const totalRemaining = 20 - count;
@@ -29,6 +32,7 @@ function App() {
         return toast.warning("Yor can't take up to 20 Credit!")
       }
       else{
+        setTotalPrice(countPrice);
         setTotalCredit(count);
         setRemaining(totalRemaining);
         setselectedCourse([...selectedCourse, course]);
@@ -42,7 +46,7 @@ function App() {
       <Header></Header>
       <div className='flex justify-between mx-5 md:mx-10 '>
         <Courses handleAddToCart={handleAddToCart}></Courses>
-        <Cart selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit}></Cart>
+        <Cart selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit} totalPrice={totalPrice}></Cart>
       </div>
     </>
   )
