@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className='flex justify-between mx-5 md:mx-10 '>
+      <div className='flex justify-between mx-5 mb-10 md:mx-10'>
         <Courses handleAddToCart={handleAddToCart}></Courses>
         <Cart selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit} totalPrice={totalPrice}></Cart>
       </div>
