@@ -1,19 +1,22 @@
 ## Features
 
-### 1. Course Selection and Cart
+- **Course Selection and Cart:**
+  - Users can browse through the list of available courses.
+  - They can select one course at a time by clicking the "Select" button.
+  - The selected course's title, credit, and price are displayed in the cart.
+  - The cart shows the total credit hours and total price of selected course(s).
 
-Users can browse through the list of available courses and select one by clicking the "Select" button. The selected course's title, credit, and price are then displayed in the cart on the right-hand side. Users can only select one course at a time, and the cart shows the total credit hours and total price of the selected course(s).
+- **Credit Hours Validation:**
+  - The system tracks the total credit hours in the cart as users select courses.
+  - An error message is displayed if the total credit hours exceed the maximum limit (e.g., 20 hours).
 
-### 2. Credit Hours Validation
+- **Total Price Calculation:**
+  - The system calculates and displays the total price of selected courses in the cart.
+  - The total price is updated whenever a course is selected or deselected.
+  - The user can see the cost of their selected courses at all times.
 
-As users select courses, the system tracks the total credit hours in the cart. If the total credit hours exceed the maximum limit (e.g., 20 hours), an error message is displayed.
-
-### 3. Total Price Calculation
-
-Calculate and display the total price of the selected courses in the cart. Whenever a course is selected or deselected, update the total price accordingly. Ensure that the user can see the cost of their selected courses at all times.
 
 These features provide a basic but functional course registration system with validation
-
 
 
 
@@ -21,7 +24,7 @@ These features provide a basic but functional course registration system with va
 
 In this React project, state management is at the core of my application's functionality. I've harnessed the power of React's built-in `useState` and `useEffect` hooks to expertly manage the state of my application.
 
-### (i) App Component State
+### (i) App Component State:
 
 In the `App` component, I've defined several state variables using the `useState` hook to manage different aspects of my application's state:
 
@@ -32,7 +35,7 @@ In the `App` component, I've defined several state variables using the `useState
 
 I update these state variables based on user actions, such as adding courses to the cart.
 
-### (ii) `handleAddToCart` Function
+### (ii) `handleAddToCart` Function:
 
 The `handleAddToCart` function is used to add a course to the cart (i.e., the `selectedCourse` state array). Here's what it does:
 
@@ -44,7 +47,7 @@ The `handleAddToCart` function is used to add a course to the cart (i.e., the `s
 
 - I check whether the user has exceeded the maximum credit limit (20 credits) and display a warning message if needed.
 
-### (iii) Courses Component State
+### (iii) Courses Component State:
 
 In the `Courses` component, I manage the `courses` state using the `useState` hook. This state variable stores the list of available courses fetched from an external JSON file. I use the `useEffect` hook to fetch the course data and update the `courses` state when the component mounts.
 
@@ -52,11 +55,11 @@ In the `Courses` component, I manage the `courses` state using the `useState` ho
 
 In the `Cart` component, I receive the `selectedCourse`, `remaining`, `totalCredit`, and `totalPrice` props. I use these props to display the selected courses in the cart and show information about the remaining credit hours and the total price.
 
-### (v) State Validation
+### (v) State Validation:
 
 Throughout my code, I perform validation on the state to ensure that it remains consistent and within the desired constraints. For example, I check if the total credit hours exceed the maximum limit and show a warning if necessary.
 
-### (yii) PropTypes
+### (vii) PropTypes:
 
 I use `PropTypes` to define the expected prop types for each component. This helps in documenting the expected props and can also catch potential bugs during development.
 
