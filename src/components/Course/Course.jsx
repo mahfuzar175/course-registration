@@ -6,8 +6,8 @@ import {ToastContainer} from 'react-toastify';
 const Course = ({course, handleAddToCart}) => {
     const {cover_img, course_title, course_details, price, credit} = course;
     return (
-        <div className='w-full p-3 bg-white rounded-lg mt-4 md:mt-0'>
-            <img src={cover_img} alt={`Cover picture of the title ${course_title}`} />
+        <div className='w-full p-3 bg-white rounded-lg mt-4 mb-4 md:mt-0'>
+            <img className='w-full' src={cover_img} alt={`Cover picture of the title ${course_title}`} />
             <h2 className='text-base font-semibold mt-3 mb-3'>{course_title}</h2>
             <small className='text-sm font-normal text-gray-600'>{course_details}</small>
             <div className='flex justify-between mt-3'>

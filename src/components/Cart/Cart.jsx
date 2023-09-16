@@ -3,7 +3,7 @@ import Coursename from '../Coursename/Coursename';
 const Cart = ({selectedCourse, remaining, totalCredit, totalPrice}) => {
 
     return (
-        <div className="w-1/3 ml-4 md:ml-10">
+        <div className="w-1/3 ml-7 mt-2 md:mt-0 md:ml-10">
             <div className="w-[332px] bg-white rounded-lg p-4">
                 <h3 className="text-lg font-bold text-[#2F80ED] mb-4">Credit Hours Remaining: {remaining} hr</h3>
                 <hr />
